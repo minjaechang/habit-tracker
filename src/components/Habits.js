@@ -18,8 +18,6 @@ class Habits extends Component {
       return item;
     });
     this.setState({ habits });
-
-    // this.setState({ count: this.state.count + 1 });
   };
 
   handleDecrement = (habit) => {
@@ -31,11 +29,15 @@ class Habits extends Component {
       return item;
     });
     this.setState({ habits });
-    // const count = this.state.count - 1;
-    // this.setState({ count: count < 0 ? 0 : count });
   };
 
-  handleDelete = () => {};
+  handleDelete = (habit) => {
+    // TODO: Check if the function works
+    const habits = this.state.habits.filter((item) => {
+      return item.id !== habit.id;
+    });
+    this.setState({ habits });
+  };
 
   render() {
     return this.state.habits.map((habit) => (
