@@ -1,0 +1,39 @@
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.habit {
+  list-style: none;
+  font-size: 2rem;
+  padding: 0.5em;
+}
+
+.habit__count {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+  color: white;
+  background-color: darkseagreen;
+  margin-left: 0.1em;
+  margin-right: 0.4em;
+}
+
+.habit__button {
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.habit__increase,
+.habit__decrease {
+  color: goldenrod;
+}
+
+.habit__delete {
+  color: darkred;
+}

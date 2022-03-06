@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import styles from './Habit.module.css';
 
 class Habit extends Component {
   render() {
     return (
-      <li className='habit'>
-        <span className='habit__name'>Coding</span>
-        <span className='habit__count'>9</span>
-        <button className='habit__increase'>
-          <i class='fa-solid fa-plus'></i>
+      <li className={styles.habit}>
+        <span className={styles.habit__name}>Coding</span>
+        <span className={styles.habit__count}>9</span>
+        <button className={`${styles.habit__button} ${styles.habit__increase}`}>
+          <i class='fa-solid fa-square-plus'></i>
         </button>
-        <button className='habit__decrease'>
-          <i class='fa-solid fa-minus'></i>
+        <button className={`${styles.habit__button} ${styles.habit__decrease}`}>
+          <i class='fa-solid fa-square-minus'></i>
         </button>
-        <button className='habit__delete'>
+        <button className={`${styles.habit__button} ${styles.habit__delete}`}>
           <i class='fa-solid fa-trash'></i>
         </button>
       </li>
