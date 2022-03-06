@@ -22,9 +22,17 @@ class Habits extends Component {
     // this.setState({ count: this.state.count + 1 });
   };
 
-  handleDecrement = () => {
-    const count = this.state.count - 1;
-    this.setState({ count: count < 0 ? 0 : count });
+  handleDecrement = (habit) => {
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
+        const count = habit.count - 1;
+        return { ...habit, count: count < 0 ? 0 : count };
+      }
+      return item;
+    });
+    this.setState({ habits });
+    // const count = this.state.count - 1;
+    // this.setState({ count: count < 0 ? 0 : count });
   };
 
   handleDelete = () => {};
