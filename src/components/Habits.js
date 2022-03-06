@@ -10,8 +10,16 @@ class Habits extends Component {
     ],
   };
 
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
+  handleIncrement = (habit) => {
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
+        return { ...habit, count: habit.count + 1 };
+      }
+      return item;
+    });
+    this.setState({ habits });
+
+    // this.setState({ count: this.state.count + 1 });
   };
 
   handleDecrement = () => {
