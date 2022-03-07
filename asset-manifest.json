@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/habit-tracker/static/css/main.cbc4978b.css",
+    "main.js": "/habit-tracker/static/js/main.f5bea3d9.js",
+    "index.html": "/habit-tracker/index.html",
+    "main.cbc4978b.css.map": "/habit-tracker/static/css/main.cbc4978b.css.map",
+    "main.f5bea3d9.js.map": "/habit-tracker/static/js/main.f5bea3d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbc4978b.css",
+    "static/js/main.f5bea3d9.js"
+  ]
+}
