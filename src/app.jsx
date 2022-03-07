@@ -46,7 +46,11 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header
+          totalCount={
+            this.state.habits.filter((habit) => habit.count > 0).length
+          }
+        />
         <HabitAddForm />
         <Habits
           habits={this.state.habits}
