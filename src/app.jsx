@@ -24,14 +24,6 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  handleDelete = (habit) => {
-    // TODO: Check if the function works
-    const habits = this.state.habits.filter((item) => {
-      return item.id !== habit.id;
-    });
-    this.setState({ habits });
-  };
-
   handleDecrement = (habit) => {
     const habits = this.state.habits.map((item) => {
       if (item.id === habit.id) {
@@ -43,6 +35,19 @@ class App extends Component {
     this.setState({ habits });
   };
 
+  handleDelete = (habit) => {
+    // TODO: Check if the function works
+    const habits = this.state.habits.filter((item) => {
+      return item.id !== habit.id;
+    });
+    this.setState({ habits });
+  };
+
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
+    this.setState({ habits });
+  };
+
   render() {
     return (
       <>
@@ -51,7 +56,7 @@ class App extends Component {
             this.state.habits.filter((habit) => habit.count > 0).length
           }
         />
-        <HabitAddForm />
+        <HabitAddForm onAdd={this.handleAdd} />
         <Habits
           habits={this.state.habits}
           handleIncrement={this.handleIncrement}
