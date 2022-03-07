@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './HabitAddForm.module.css';
 
 class HabitAddForm extends Component {
   formRef = React.createRef();
@@ -12,14 +13,18 @@ class HabitAddForm extends Component {
 
   render() {
     return (
-      <form ref={this.formRef} onSubmit={this.handleSubmit}>
+      <form
+        ref={this.formRef}
+        className={styles.form}
+        onSubmit={this.handleSubmit}
+      >
         <input
           ref={this.inputRef}
-          className='form__input'
+          className={styles.form__input}
           type='text'
           placeholder='Enter new habit!'
         />
-        <button className='form__button' type='submit'>
+        <button className={styles.form__button} type='submit'>
           Add
         </button>
       </form>

@@ -1,0 +1,14 @@
+.form {
+  padding: 1rem;
+}
+
+.form__input {
+  font-size: 1.5rem;
+}
+
+.form__button {
+  font-size: 1.3rem;
+  margin-left: 0.5em;
+  padding: 0.3rem;
+  border-radius: 0.7rem;
+}
