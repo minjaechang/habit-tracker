@@ -1,0 +1,21 @@
+.header {
+  background-color: wheat;
+  padding: 1.3em;
+}
+
+.header__title {
+  font-size: 2rem;
+  margin-right: 0.3rem;
+}
+
+.header__count {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: darkseagreen;
+}
