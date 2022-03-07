@@ -36,10 +36,7 @@ class App extends Component {
   };
 
   handleDelete = (habit) => {
-    // TODO: Check if the function works
-    const habits = this.state.habits.filter((item) => {
-      return item.id !== habit.id;
-    });
+    const habits = this.state.habits.filter((item) => item.id !== habit.id);
     this.setState({ habits });
   };
 

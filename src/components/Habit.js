@@ -10,6 +10,10 @@ class Habit extends Component {
     this.props.onDecrement(this.props.habit);
   };
 
+  handleDelete = () => {
+    this.props.onDelete(this.props.habit);
+  };
+
   render() {
     const { name, count } = this.props.habit;
     return (
@@ -30,7 +34,7 @@ class Habit extends Component {
         </button>
         <button
           className={`${styles.habit__button} ${styles.habit__delete}`}
-          onClick={this.props.onDelete}
+          onClick={this.handleDelete}
         >
           <i className='fa-solid fa-trash'></i>
         </button>
